@@ -26,7 +26,7 @@ public class TaskService {
 
     public List<Task> getAllTasks(TaskStatus status) {
         if (status != null) {
-            return taskRepository.findAll();
+            return taskRepository.findByStatus(status);
         }
 
         return taskRepository.findAll();
